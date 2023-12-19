@@ -16,14 +16,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const drugSchema = new Schema({
-    name: {type:String, required:true},
-    strength: {type: Number, required:true},
+    name: {type:String, required: true},
+    strength: {type: Number, required: true},
     measurement: {type: String, required: true},
     route: {type: String, required: true},
     tier: {type: String, required: true},
     alternatives: {type: String}
 });
 
-const Diabetes = mongoose.model('diabetes', drugSchema);
+const Drug = mongoose.model('drug', drugSchema);
 
-module.exports = Diabetes;
+
+module.exports = Drug;
