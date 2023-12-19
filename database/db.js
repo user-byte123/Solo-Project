@@ -1,0 +1,1 @@
+//looks like the db connection was placed in models to use the schema in starwars
