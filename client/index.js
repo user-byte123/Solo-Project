@@ -9,8 +9,8 @@ import App from './App';
 //how react application gets injected into HTML file and displayed in browser
 render(
     <BrowserRouter>
-        <App/>
+        <App />
     </BrowserRouter>,
     //looks for an HTML element w/ ID of 'app' this will be where the React application will be mounted/rendered
-    document.getElementById('app'),
+    document.getElementById('root'),
 )

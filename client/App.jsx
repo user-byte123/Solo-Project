@@ -6,24 +6,7 @@ import AddDrug from './components/AddDrug';
 
 import './stylesheets/styles.css';
 
-const App = props => {
-    return (
-        <div className="router">
-            <main>
-                <Switch>
-                    <Route
-                    exact
-                    path="/"
-                    component={DrugList}
-                    />
-                    <Route
-                    exact
-                    path="/drug"
-                    component={AddDrug}
-                    />
-                </Switch>
-            </main>
-        </div>
-    )
-}
+const App = () => {
+    return <div>Hello, world!</div>
+};
 export default App;
