@@ -1,17 +1,22 @@
 const express = require('express');
 const router = express.Router();
+const controller = require('../controller/controller.js')
 const Drug = require('../models/drugModel');
 
-router.post('/drug', async (req,res) => {
-  const drug = new Drug(req.body)
-  try {
-    await drug.save()
-    res.status(200).json({status:'Success', data: {drug}})
-  }catch(err) {
-    res.status(500).json({
-        status:'Faliled',
-        message: err
-    })
-}
+router.post('/drug', controller.addDrug, (req,res) => {
+    res.status(200).json(res.drugAdded);
 })
+
+router.get('/drug/:name', controller.findDrug, (req,res) => {
+    res.status(200).json(res.drugFound);
+})
+
+router.delete('/drug/:name', controller.deleteDrug, (req,res) => {
+    res.status(200).json(res.deletedDrug)
+})
+
+router.patch('/drug/:drugId', controller.updateDrug, (req, res) => {
+    res.status(200).json(res.updateDrug)
+})
+
 module.exports = router;
