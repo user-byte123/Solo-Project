@@ -29,7 +29,7 @@ app.use(express.json());
 //I think i need to be able to parse the request body:
 app.use(express.urlencoded({ extended: true }))
 
-app.use(express.static(path.resolve(__dirname, './assets')));
+app.use(express.static(path.resolve(__dirname, './client')));
 
 //define route handlers
 app.use('/', myRouter);
