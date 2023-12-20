@@ -10,15 +10,20 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(jsx?)/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
-				},
-				test: /\.s?css/,
+					options: {
+						presets: ['@babel/preset-react']
+					}
+				},	
+			},
+			{
+				test: /\.s?css$/,
 				exclude: /node_modules/,
 				use: ['style-loader', 'css-loader']
-			},
+			}
 		],
 	},
 	resolve: {
@@ -32,9 +37,11 @@ module.exports = {
 	],
 	devServer: {
 		static: {
+			publicPath: '/dist',
 			directory: path.join(__dirname, 'dist'),
 		},
-		hot: true,
-		open: true,
+		proxy: {
+			'/api': 'http://localhost:3000'
+		}
 	},
 };

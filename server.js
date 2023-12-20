@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const myRouter = require('./routes/myRouter.js')
 const mongoose = require('mongoose');
+const cors = require('cors')
+app.use(cors());
 const PORT = 3000;
 
 const MONGO_URI = "mongodb+srv://ewong1217:8qogx2qu38W3Nasu@cluster0.vq8eez3.mongodb.net/?retryWrites=true&w=majority";
@@ -29,10 +31,9 @@ app.use(express.json());
 //I think i need to be able to parse the request body:
 app.use(express.urlencoded({ extended: true }))
 
-app.use(express.static(path.resolve(__dirname, './client')));
-
 //define route handlers
 app.use('/api', myRouter);
+app.use(express.static(path.resolve(__dirname, './client')));
 
 // catch-all route handler for any requests to an unknown route
 app.use((req, res) => res.status(404).send('This is not the page you\'re looking for...'));

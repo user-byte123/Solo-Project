@@ -1,11 +1,12 @@
 const Drug = require('../models/drugModel.js');
 
+
 const controller = {};
 
 controller.getDrugList = async (req, res, next) => {
     try {
         const drugList = await Drug.find();
-        res.locals = drugList;
+        res.drugList = drugList;
         return next();
     }catch(err) {
         return next({
