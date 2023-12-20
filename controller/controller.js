@@ -2,6 +2,20 @@ const Drug = require('../models/drugModel.js');
 
 const controller = {};
 
+controller.getDrugList = async (req, res, next) => {
+    try {
+        const drugList = await Drug.find();
+        res.locals = drugList;
+        return next();
+    }catch(err) {
+        return next({
+            log: 'error in getDrugList',
+            status: 400,
+            message: 'Cannot pull up drug list'
+        })
+    }
+}
+
 controller.addDrug = async (req, res, next) => {
     const { name, strength, measurement, route, tier, alternatives } = req.body;
     try {
