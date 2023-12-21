@@ -13,6 +13,7 @@ function App() {
         <Route exact path='/' element={<DrugList />}/>
         <Route exact path='/drug' element={<AddDrug />}/>
         <Route exact path='/delete/:id' element={<DeleteDrug />}/>
+        <Route exact path='/update/:id' element={<UpdateDrug />}/>
       </Routes>
     </Router>
   )

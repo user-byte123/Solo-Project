@@ -42,7 +42,7 @@ function DrugList(props) {
 							<p className='columns'>
 								<Link to={`/delete/${item._id}`}>
 									<button className='deleteBtn'><FontAwesomeIcon icon={faTrashAlt}/></button></Link>
-								<Link><button className='updateBtn'><FontAwesomeIcon icon={faEdit}/></button>
+								<Link to={`/update/${item._id}`}><button className='updateBtn'><FontAwesomeIcon icon={faEdit}/></button>
 								</Link>
 							</p>
 						</div>
