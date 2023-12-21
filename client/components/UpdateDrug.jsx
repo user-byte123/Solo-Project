@@ -39,14 +39,14 @@ function UpdateDrug() {
                 },
                 body: JSON.stringify(updatedData)
             })
-            navigate('/')
+            navigate('/druglist')
         } catch(error){
             console.log('Error occurred in handleUpdate event listener')
         }
     }
 
     const handleCancel = () => {
-        navigate('/')
+        navigate('/druglist')
     }
     return(
          <div className='UpdateDrug'>

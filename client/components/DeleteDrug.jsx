@@ -11,11 +11,11 @@ function DeleteDrug(props){
                 'Content-Type':'application/json'
             }
         })
-        navigate('/');
+        navigate('/druglist');
     } 
 
     const handleCancel = (e) => {
-        navigate('/')
+        navigate('/druglist')
     }
     return (
         <div className='deletePage'>

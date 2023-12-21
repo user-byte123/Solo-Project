@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faPaperPlane, faTrashAlt, faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { faBookmark, faCircleQuestion, faEdit, faHospital, faKeyboard, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 function DrugList(props) {
     const [data, setData] = useState([]);
@@ -18,6 +19,16 @@ function DrugList(props) {
 
 		return (
 			<div>
+				<h1 className='main'><FontAwesomeIcon icon={faHospital} className='hospitalIcon'/>RxCoverage</h1>
+				<nav className='navBar'>
+					<ul className='navBarOptions'>
+						<li className='navBarSelection'><Link to="/">Insurance Lookup</Link></li>
+						<li className='navBarSelection'><Link to="/contact">Contact Provider</Link></li>
+						<li className='navBarSelection'><Link to="/savings">Savings</Link></li>
+						<li className='navBarSelection'><div className='search'><input type="text" /><FontAwesomeIcon icon={faSearch} className='hospitalIcon'/></div></li>
+					</ul>
+				</nav>
+				<h1 className='title'>Aetna's Medication Coverage</h1>
 				<div className="btnContainer">
 					<Link to="/drug">
 					<button className='addDrugBtn'>Add New Drug</button>

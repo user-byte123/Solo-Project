@@ -29,7 +29,7 @@ function AddDrug() {
       });
       console.log('fetch completed')
       if (response.ok) {
-        navigate('/')
+        navigate('/druglist')
       }
     }
     catch (error) {
@@ -37,34 +37,42 @@ function AddDrug() {
     }
   }
 
+  const handleCancel = (e) => {
+    navigate('/druglist')
+  }
+
   return(
     <div className='formContainer'>
+      <h3 className='addDrugTitle'>Add a Drug</h3>
       <form onSubmit={handleSubmit} className='formItself'>
-        <div>
-          <label>Drug Name: </label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange}/>
+        <div className='innerForm'>
+          <div>
+            <label>Drug Name: </label>
+            <input type="text" name="name" value={formData.name} onChange={handleChange}/>
+          </div>
+          <div>
+            <label>Strength: </label>
+            <input type="number" name="strength" value={formData.strength} onChange={handleChange}/>
+          </div>
+          <div>
+            <label>Measurement: </label>
+            <input type="text" name="measurement" value={formData.measurement} onChange={handleChange}/>
+          </div>
+          <div>
+            <label>Route: </label>
+            <input type="text" name="route" value={formData.route} onChange={handleChange}/>
+          </div>
+          <div>
+            <label>Tier: </label>
+            <input type="text" name="tier" value={formData.tier} onChange={handleChange}/>
+          </div>
+          <div>
+            <label>Alternatives: </label>
+            <input type="text" name="alternatives" value={formData.alternatives} onChange={handleChange}/>
+          </div>
+          <button type="submit" className="submitDrugBtn">Submit</button>
+          <button type="submit" className="cancelDrugBtn" onClick={handleCancel}>Cancel</button>
         </div>
-        <div>
-          <label>Strength: </label>
-          <input type="number" name="strength" value={formData.strength} onChange={handleChange}/>
-        </div>
-        <div>
-          <label>Measurement: </label>
-          <input type="text" name="measurement" value={formData.measurement} onChange={handleChange}/>
-        </div>
-        <div>
-          <label>Route: </label>
-          <input type="text" name="route" value={formData.route} onChange={handleChange}/>
-        </div>
-        <div>
-          <label>Tier: </label>
-          <input type="text" name="tier" value={formData.tier} onChange={handleChange}/>
-        </div>
-        <div>
-          <label>Alternatives: </label>
-          <input type="text" name="alternatives" value={formData.alternatives} onChange={handleChange}/>
-        </div>
-        <button type="submit" className="submit">Submit</button>
       </form>
     </div>
   )
