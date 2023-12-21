@@ -34,10 +34,10 @@ controller.addDrug = async (req, res, next) => {
 }
 
 controller.findDrug = async (req, res, next) => {
-    const { name } = req.params;
+    const { id } = req.params;
     try {
-        const drugFound = await Drug.find({name}, {_id:false});
-        res.drugFound = drugFound[0];
+        const drugFound = await Drug.findById(id);
+        res.drugFound = drugFound;
         return next();
     }catch(err) {
         next({
@@ -49,10 +49,10 @@ controller.findDrug = async (req, res, next) => {
 }
 
 controller.deleteDrug = async (req, res, next) => {
-    const { name } = req.params;
+    const { id } = req.params;
     try {
-        await Drug.delete({name});
-        res.deletedDrug = `Successfully deleted ${name} from formulary`
+        await Drug.findByIdAndDelete(id);
+        res.deletedDrug = `Successfully deleted from formulary`
         return next();
     }
     catch(err) {

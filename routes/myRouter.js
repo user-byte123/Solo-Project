@@ -11,11 +11,11 @@ router.post('/drug', controller.addDrug, (req,res) => {
     res.status(200).json(res.drugAdded);
 })
 
-router.get('/drug/:name', controller.findDrug, (req,res) => {
+router.get('/drug/:id', controller.findDrug, (req,res) => {
     res.status(200).json(res.drugFound);
 })
 
-router.delete('/drug/:name', controller.deleteDrug, (req,res) => {
+router.delete('/drug/:id', controller.deleteDrug, (req,res) => {
     res.status(200).json(res.deletedDrug)
 })
 

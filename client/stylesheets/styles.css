@@ -1,4 +1,143 @@
+body {
+    height: 100%;
+    margin: 5rem;
+    background-color: #a9d6e5;
+}
+
+.title {
+    color: red;
+}
+
 .header {
+    position: sticky;
+    top: 0;
+}
+
+.header, .row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px solid black;
+    margin: 0px 1rem;
+}
+
+.header p, .row p {
+    padding: 5px; 
+    text-align: center;
+    font-size: larger;
+}
+
+.btnContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.addDrugBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.addDrugBtn:hover {
+    cursor: pointer;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    box-sizing: content-box;
+    background-color: #61a5c2;
+    box-shadow: 10px 5px 10px #013a63;
+}
+
+label {
+    display: flex;
+    align-items: flex-start;
+}
+
+input {
+    display:flex;
+    align-items: center;
+}
+
+.submit {
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.deleteBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
+}
+
+.cancelBtn, .confirmBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.cancelBtn:hover, .confirmBtn:hover {
+    cursor: pointer;
+}
+
+.deletePage {
+    box-shadow: 0 0 10px black;
+    padding: 1rem;
+    background-color: 61a5c2;
+    text-align: center;
+}
+
+.updateBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.updateBtn:hover {
+    cursor: pointer;
+}
+
+.header {
+    background-color: #013a63;
+    color: white;
+}
+
+.row:nth-child(even) {
+    background-color: #61a5c2;
+}
+
+.row:nth-child(odd) {
+    background-color: #89c2d9;
 }
