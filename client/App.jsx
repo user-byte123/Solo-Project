@@ -6,6 +6,7 @@ import DeleteDrug from './components/DeleteDrug'
 import UpdateDrug from './components/UpdateDrug'
 import Home from './components/Home'
 import Contact from './components/Contact'
+import Savings from './components/Savings'
 
 //standard js fxn, and returns jsx code --> react component and use as HTML element and it is a function that is defined and exported --> fxn that acts as a component that returns JSx
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/delete/:id' element={<DeleteDrug />}/>
         <Route exact path='/update/:id' element={<UpdateDrug />}/>
         <Route exact path='/contact' element={<Contact />}/>
+        <Route exact path='/savings' element={<Savings />}/>
       </Routes>
     </Router>
   )

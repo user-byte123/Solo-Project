@@ -20,8 +20,14 @@ function About() {
                 <div className='card'>
                     <h2 className='cardTitle'>Insurance Lookup</h2>
                     <p className='cardDescription'>Please fill out the following information below to pull up your coverage.</p>
+                    <label>Insurance: </label>
+                    <select name="insurance" for="insurance">
+                        <option value="Select An Insurance">Select An Insurance</option>
+                        <option value="Aetna">Aetna</option>
+                        <option value="CVS Caremark">CVS Caremark</option>
+                        <option value="Express Scripts">Express Scripts</option>
+                    </select>
                     <p className='cardInputBox'>Name: <input  text='string'/></p>
-                    <p className='cardInputBox'>Insurance Name: <input  text='string'/></p>
                     <p className='cardInputBox'>ID Number: <input  text='string'/></p>
                     <p className='cardInputBox'>Group Number: <input  text='number'/></p>
                     <p className='cardInputBox'>Bin Number: <input  text='number'/></p>
