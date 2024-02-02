@@ -1,0 +1,360 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #a9d6e5;
+}
+.hospitalIcon {
+    margin-right: 10px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    background-color: #023e8a;
+    color: white;
+    top: 0;
+    margin: 0;
+    padding-bottom: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+.navBar {
+    background-color: #03045e;
+    width: 100%;
+}
+
+.navBarOptions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    height: 3rem;
+    list-style-type: none;
+}
+
+.navBarSelection a {
+    text-decoration: none;
+    color: white;
+}
+
+.navBarSelection:hover{
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 11rem;
+    height: 1.5rem;
+    border-radius: 15px;
+}
+
+.search input {
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    justify-items: center;
+    padding-left: 10px;
+}
+
+.outerContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    align-self: center;
+    width: 40rem;
+    border-radius: 15px;
+    padding-bottom: 3rem;
+    box-shadow: 10px 5px 5px #014f86;
+}
+
+.cardTitle {
+    align-self: flex-start;
+    margin-left:  2rem;
+}
+
+.cardDescription {
+    align-self: flex-start;
+    margin: 0 0 1rem 2rem;
+}
+
+.cardInputBox {
+    margin: 1px;
+}
+
+.cardSubmit {
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.cardSubmit:hover {
+    cursor: pointer;
+}
+
+.title {
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.header, .row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px solid black;
+    margin: 0px 10rem;
+}
+
+.header p, .row p {
+    padding: 5px; 
+    text-align: center;
+    font-size: larger;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.addDrugBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.addDrugBtn:hover {
+    cursor: pointer;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    box-sizing: content-box;
+    background-color: #61a5c2;
+    box-shadow: 10px 5px 10px #013a63;
+    align-items: center;
+    margin: 10rem;
+}
+
+.addDrugTitle {
+    margin-top: 1px;
+}
+
+.innerForm {
+    align-self: center;
+}
+
+label {
+    display: flex;
+    align-items: flex-start;
+}
+
+input {
+    display:flex;
+    align-items: center;
+}
+
+.submitDrugBtn, .cancelDrugBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.submitDrugBtn:hover, .cancelDrugBtn:hover {
+    cursor: pointer;
+}
+
+.deleteBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.deleteBtn:hover {
+    cursor: pointer;
+}
+
+.cancelBtn, .confirmBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.cancelBtn:hover, .confirmBtn:hover {
+    cursor: pointer;
+}
+
+.deletePage {
+    box-shadow: 0 0 10px black;
+    padding: 1rem;
+    background-color: 61a5c2;
+    text-align: center;
+}
+
+.updateBtn {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: #014f86;
+    color: white;
+    font-size: 14px;
+}
+
+.updateBtn:hover {
+    cursor: pointer;
+}
+
+.header {
+    background-color: #013a63;
+    color: white;
+}
+
+.row:nth-child(even) {
+    background-color: #61a5c2;
+}
+
+.row:nth-child(odd) {
+    background-color: #89c2d9;
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55rem;
+    background-color: white;
+    margin: 10rem;
+    box-shadow: 10px 10px 5px #014f86;
+    border-radius: 15px;
+}
+
+.pContact {
+    margin-right: 60px;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.imgContact {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+img {
+    background-color: transparent;
+    width: 20rem;
+    justify-items: flex-start;
+}
+
+.syringeBtn, .tabletBtn, .medKitBtn {
+    font-size: 100px;
+    margin: 10px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    color: #61a5c2;
+    border: #014f86;
+    box-shadow: 10px 10px 10px #014f86;
+}
+
+.syringeBtn:hover, .tabletBtn:hover, .medKitBtn:hover {
+    cursor: pointer;
+}
+
+.medicationCard {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem;
+    align-items: center;
+}
+
+.mainSavings {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.saveOnMeds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #89c2d9;
+    height: 40rem;
+}
+
+.stepsSavings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.childStepsSavings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+    padding: 50px;
+    box-shadow: 10px 10px 10px #014f86;
+    /* clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%) */
+}
+
+.iconSavings {
+    font-size: 40px;
+    margin: 0;
+    color: #89c2d9;
+}
